@@ -1,0 +1,12 @@
+
+ProductoService --> Clase
+
+precioVenta     --> Variable
+
+calculaImporte  --> método
+
+PORCENTAJE_DCTO --> constante
+
+
+
+
