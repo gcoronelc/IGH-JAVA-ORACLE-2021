@@ -1,4 +1,4 @@
-![TALLER JAVA-ORACLE](https://raw.githubusercontent.com/gcoronelc/UC-2020-20-15795/main/img/curso.png)
+![TALLER JAVA-ORACLE](https://raw.githubusercontent.com/gcoronelc/IGH-JAVA-ORACLE-2021/main/img/logo.png)
 
 # TALLER JAVA-ORACLE
 
