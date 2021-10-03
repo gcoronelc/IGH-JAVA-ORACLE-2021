@@ -1,7 +1,7 @@
 ﻿CLONAR EL REPOSITORIO
 ----------------------------------------------
 
-git clone https://github.com/gcoronelc/UC-2021-20-FUND-PROG.git
+git clone https://github.com/gcoronelc/IGH-JAVA-ORACLE-2021.git
 
 
 
