@@ -17,7 +17,6 @@ public class Ejemplo09 {
 		int n3 = 047;
 		int n4 = 0x16;
 		
-		
 		System.out.println("n1 = " + n1);
 		System.out.println("n2 = " + n2);
 		System.out.println("n3 = " + n3);
