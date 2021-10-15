@@ -9,37 +9,31 @@ import java.util.Scanner;
  * @youtube www.youtube.com/c/DesarrollaSoftware
  * @facebook www.facebook.com/groups/desarrollasoftware/
  */
-public class Ejemplo10 {
+public class Ejemplo11 {
 
 	public static void main(String[] args) {
 
 		// Variables
 		Scanner scanner = new Scanner(System.in);
-		double precio, porcDcto, importeBruto, dcto, importeNeto;
-		int cantidad;
+		int numero, resto;
+		String reporte;
 		// Lectura de datos
 		System.out.println("LECTURA DE DATOS");
 		System.out.println("======================================");
-		System.out.print("Precio: ");
-		precio = scanner.nextDouble();
-		System.out.print("% de descuento: ");
-		porcDcto = scanner.nextDouble();
-		System.out.print("Cantidad: ");
-		cantidad = scanner.nextInt();
+		System.out.print("Número entero: ");
+		numero = scanner.nextInt();
 		// Proceso
-		importeBruto = precio * cantidad;
-		dcto = 0.0;
-		if(cantidad>=6){
-			dcto = importeBruto * porcDcto/100;
+		resto = numero % 2;
+		if(resto==0){
+			reporte = numero + " es par.";
+		} else {
+			reporte = numero + " es impar.";
 		}
-		importeNeto = importeBruto - dcto;
 		// Reporte
 		System.out.println("");
 		System.out.println("REPORTE");
 		System.out.println("======================================");
-		System.out.println("Importe bruto: " + importeBruto);
-		System.out.println("Descuento: " + dcto);
-		System.out.println("Importe neto: " + importeNeto);
+		System.out.println(reporte);
 		
 	}
 

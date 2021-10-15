@@ -9,11 +9,8 @@ package aprendiendojava;
  */
 public class AprendiendoJava {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("No pasa nada");
     }
 
 }
