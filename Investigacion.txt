@@ -1,0 +1,16 @@
+-- JAVA ORIENTADO A OBJETOS
+------------------------------------------------------------------------------
+- Pruebas Unitarias                        07/NOV/21    Grupo03
+- Archivos Log                             07/NOV/21    Grupo04
+- Java Reflection                          14/NOV/21    Grupo05
+- Manejo de Datos Genericos (Generic)      14/NOV/21    Grupo02
+- Patrones Factory                         14/NOV/21    Grupo01
+
+
+
+- Expresiones regulares con Java 
+
+
+
+
+

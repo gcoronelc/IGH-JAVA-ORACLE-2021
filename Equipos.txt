@@ -1,35 +1,32 @@
-EQUIPO 01
---------------------------
+EQUIPO 01 - OK
+--------------------------------
 Luis Vasquez (Lider)
 Miguel Del Campo
 Luis Del Campo
+Satumar Camacho
 
-EQUIPO 02
---------------------------
+EQUIPO 02 - OK
+--------------------------------
 Daniel Neyra (lider)
 Patrick Alamo
 Cesar Caceres
 
-EQUIPO 03
---------------------------
+EQUIPO 03 - OK
+--------------------------------
 Leonardo Choquehuanca (Lider)
 Gerson Valle
 MArtin Bermeo
+Fredy Diaz
 
-EQUIPO 04
---------------------------
+EQUIPO 04 - OK
+--------------------------------
 Miguel Villafuerte (lider)
 Hernando Torre
 Carlos medina
-
-EQUIPO 05
---------------------------
-Fredy Diaz (lider)
 Diana Solano
-Satumar Camacho
 
-EQUIPO 06
---------------------------
+EQUIPO 05 - OK
+--------------------------------
 Jim Chahuayo (Lider)
 Paula Balbin
 Nancy Vega
