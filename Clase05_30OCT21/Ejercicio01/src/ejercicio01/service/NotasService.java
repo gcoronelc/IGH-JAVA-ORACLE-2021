@@ -11,16 +11,17 @@ import java.util.Arrays;
  * @cursos gcoronelc.github.io
  */
 public class NotasService {
-	
+
 	/**
 	 * Calcula el promedio de practicas.
+	 *
 	 * @param pract1
 	 * @param pract2
 	 * @param pract3
 	 * @param pract4
-	 * @return 
+	 * @return
 	 */
-	public int promediarPracticas(int pract1, int pract2, int pract3, int pract4){
+	public int promediarPracticas(int pract1, int pract2, int pract3, int pract4) {
 		// Variables
 		int notaMenor, promedio;
 		// Proceso
@@ -35,14 +36,14 @@ public class NotasService {
 		int nota;
 		// Proceso
 		nota = pract1;
-		nota = (nota>pract2)?pract2:nota;
-		nota = (nota>pract3)?pract3:nota;
-		nota = (nota>pract4)?pract3:nota;
+		nota = (nota > pract2) ? pract2 : nota;
+		nota = (nota > pract3) ? pract3 : nota;
+		nota = (nota > pract4) ? pract3 : nota;
 		// Reporte
 		return nota;
 	}
-	
-	public int promediarPracticasV2(int pract1, int pract2, int pract3, int pract4){
+
+	public int promediarPracticasV2(int pract1, int pract2, int pract3, int pract4) {
 		// Variables
 		int[] notas;
 		int suma, promedio;
@@ -56,6 +57,33 @@ public class NotasService {
 		promedio = suma / 3;
 		// Reporte
 		return promedio;
-	}	
+	}
+
+	/**
+	 * Calcula el promedio final.
+	 *
+	 * @param pp Promedio de practicas
+	 * @param ep Examen parcial
+	 * @param ef Examen final
+	 * @return Retorna el promedio final del curso.
+	 */
+	public int promedioFinal(int pp, int ep, int ef) {
+		// Variables
+		int promedio;
+		// Proceso
+		promedio = (int) (pp * 0.25 + ep * 0.25 + ef * 0.50);
+		// Reporte
+		return promedio;
+	}
+	
+	
+	public String obtenerEstado(int promFinal){
+		// Variables
+		String estado;
+		// Proceso
+		estado = (promFinal>=14)?"Aprobado":"Desaprobado";
+		// Reporte
+		return estado;
+	}
 
 }

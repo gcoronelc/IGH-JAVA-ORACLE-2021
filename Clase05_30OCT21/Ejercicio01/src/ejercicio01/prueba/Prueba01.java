@@ -22,7 +22,7 @@ public class Prueba01 {
 		nota4 = 16;
 		// Proceso
 		NotasService notasService = new NotasService();
-		promedio = notasService.promediarPracticasV2(nota1, nota2, nota3, nota4);
+		promedio = notasService.promediarPracticas(nota1, nota2, nota3, nota4);
 		// Reporte
 		System.out.println("Promedio: " + promedio);
 	}
