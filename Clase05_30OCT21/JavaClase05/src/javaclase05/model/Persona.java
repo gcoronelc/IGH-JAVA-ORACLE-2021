@@ -16,12 +16,28 @@ public class Persona {
 	private int edad;
 	private String profesion;
 
+	// Constructor por defecto
 	public Persona() {
+		System.out.println("Objeto creado.");
 		this.colorOjos = "Marrones";
 		this.colorPelo = "Negro";
 		this.talla = 175;
 		this.edad = 24;
 		this.profesion = "Ingeniero de Sistemas";
+	}
+
+	// Constructor adicional
+	public Persona(String colorOjos, String colorPelo, int talla, int edad, String profesion) {
+		this.colorOjos = colorOjos;
+		this.colorPelo = colorPelo;
+		this.talla = talla;
+		this.edad = edad;
+		this.profesion = profesion;
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		System.err.println("Objeto librerado.");
 	}
 	
 	
