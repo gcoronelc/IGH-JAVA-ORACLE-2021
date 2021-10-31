@@ -1,4 +1,4 @@
-package ejercicio01;
+package javaclase05;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -8,11 +8,10 @@ package ejercicio01;
  * @facebook www.facebook.com/groups/desarrollasoftware/
  * @cursos gcoronelc.github.io
  */
-public class Ejercicio01 {
+public class JavaClase05 {
 
-	public static void main(String[] args) {
-
-
-	}
+    public static void main(String[] args) {
+        
+    }
 
 }

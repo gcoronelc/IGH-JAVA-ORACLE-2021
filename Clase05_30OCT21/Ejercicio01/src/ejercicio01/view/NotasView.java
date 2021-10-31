@@ -9,6 +9,8 @@ package ejercicio01.view;
  * @cursos http://gcoronelc.github.io/
  */
 public class NotasView extends javax.swing.JFrame {
+	
+	
 
     /** Creates new form NotasView */
     public NotasView() {
@@ -30,11 +32,11 @@ public class NotasView extends javax.swing.JFrame {
       getContentPane().setLayout(layout);
       layout.setHorizontalGroup(
          layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 608, Short.MAX_VALUE)
+         .addGap(0, 629, Short.MAX_VALUE)
       );
       layout.setVerticalGroup(
          layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 464, Short.MAX_VALUE)
+         .addGap(0, 430, Short.MAX_VALUE)
       );
 
       pack();
