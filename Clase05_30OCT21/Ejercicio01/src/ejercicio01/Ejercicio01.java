@@ -1,6 +1,4 @@
-package com.igh.todobarato;
-
-import com.igh.todobarato.view.PagoView;
+package ejercicio01;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -10,10 +8,10 @@ import com.igh.todobarato.view.PagoView;
  * @facebook www.facebook.com/groups/desarrollasoftware/
  * @cursos gcoronelc.github.io
  */
-public class TodoBarato {
+public class Ejercicio01 {
 
     public static void main(String[] args) {
-        PagoView.main(args);
+        
     }
 
 }
