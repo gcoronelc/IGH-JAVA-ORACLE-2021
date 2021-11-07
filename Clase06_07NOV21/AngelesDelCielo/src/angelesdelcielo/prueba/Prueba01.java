@@ -1,6 +1,6 @@
-package prueba;
+package angelesdelcielo.prueba;
 
-import service.DemoService;
+import angelesdelcielo.service.MyMath;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -10,20 +10,13 @@ import service.DemoService;
  * @facebook www.facebook.com/groups/desarrollasoftware
  * @cursos gcoronelc.github.io
  */
-public class Prueba02 {
-
+public class Prueba01 {
+	
 	public static void main(String[] args) {
-		
-		DemoService demoService = new DemoService();
-		
-		demoService.sumar(5,8);
-		demoService.sumar(5L,8L);
-		demoService.sumar(5,8L);
-		demoService.sumar(5.0,8.0);
-		demoService.sumar(5.0f,8.0f);
-		
+		for (int i = 0; i < 8; i++) {
+			long f = MyMath.factorial(i);
+			System.out.println("Factorial de " + i + " es " + f);
+		}
 	}
-	
-	
-	
+
 }
