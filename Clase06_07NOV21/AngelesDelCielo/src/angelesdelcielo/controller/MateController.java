@@ -1,6 +1,6 @@
-package angelesdelcielo;
+package angelesdelcielo.controller;
 
-import angelesdelcielo.view.MainView;
+import angelesdelcielo.service.MyMath;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -10,10 +10,10 @@ import angelesdelcielo.view.MainView;
  * @facebook www.facebook.com/groups/desarrollasoftware
  * @cursos gcoronelc.github.io
  */
-public class AngelesDelCielo {
-
-    public static void main(String[] args) {
-		 MainView.main(args);
-    }
+public class MateController {
+	
+	public long factorial(int n) {
+		return MyMath.factorial(n);
+	}
 
 }
