@@ -9,7 +9,7 @@ import pe.egcc.ventaapp.model.ItemModel;
  * @youtube www.youtube.com/c/DesarrollaSoftware
  * @facebook www.facebook.com/groups/desarrollasoftware/
  */
-public class FacturaService extends CompAbstract{
+public class FacturaService extends ComprobanteAbstract{
 
 	@Override
 	public ItemModel[] procVenta(double total) {

@@ -1,8 +1,8 @@
 package pe.egcc.ventaapp.prueba;
 
 import pe.egcc.ventaapp.model.ItemModel;
-import pe.egcc.ventaapp.service.CompAbstract;
-import pe.egcc.ventaapp.service.CompFactory;
+import pe.egcc.ventaapp.service.ComprobanteAbstract;
+import pe.egcc.ventaapp.service.ComprobanteFactory;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -17,7 +17,7 @@ public class Prueba04 {
 		// Datos
 		double total = 1180.0;
 		// Proceso
-		CompAbstract service = CompFactory.getComp(CompFactory.BOLETA);
+		ComprobanteAbstract service = ComprobanteFactory.getComprobante(ComprobanteFactory.FACTURA);
 		ItemModel[] repo = service.procVenta(total);
 		// Reporte
 		for (ItemModel model : repo) {

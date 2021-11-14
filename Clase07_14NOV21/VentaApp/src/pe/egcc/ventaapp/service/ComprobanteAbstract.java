@@ -9,7 +9,7 @@ import pe.egcc.ventaapp.model.ItemModel;
  * @youtube www.youtube.com/c/DesarrollaSoftware
  * @facebook www.facebook.com/groups/desarrollasoftware/
  */
-public abstract class CompAbstract {
+public abstract class ComprobanteAbstract {
 	
 	protected final double IGV = 0.18;
 	protected final double SERVICIO = 0.10;

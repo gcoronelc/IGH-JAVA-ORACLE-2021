@@ -7,12 +7,12 @@ package pe.egcc.ventaapp.service;
  * @youtube www.youtube.com/c/DesarrollaSoftware
  * @facebook www.facebook.com/groups/desarrollasoftware/
  */
-public class CompFactory {
+public class ComprobanteFactory {
 	
 	public static final String BOLETA = "Boleta";
 	public static final String FACTURA = "Factura";
 	
-	private CompFactory() {
+	private ComprobanteFactory() {
 	}
 
 	public static String[] getTipos(){
@@ -20,8 +20,8 @@ public class CompFactory {
 		return tipos;
 	}
 	
-	public static CompAbstract getComp( String tipo ){
-		CompAbstract service = null;
+	public static ComprobanteAbstract getComprobante( String tipo ){
+		ComprobanteAbstract service = null;
 		switch( tipo ){
 			case BOLETA: 
 				service = new BoletaService();
