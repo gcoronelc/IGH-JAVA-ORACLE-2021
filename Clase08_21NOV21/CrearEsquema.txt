@@ -1,0 +1,54 @@
+﻿CREACION DE UN ESQUEMA
+---------------------------------------------------------
+
+
+SQL> connect system/oracle
+
+
+SQL> create user almacen identified by admin;
+  
+  
+SQL> create user almacen 
+  2  identified by admin;
+
+
+SQL> grant connect to almacen;
+
+
+SQL> grant resource to almacen;
+
+
+SQL> connect almacen/admin
+
+
+SQL> show user
+
+
+-- Creación de una tabla
+
+CREATE TABLE persona(
+codigo   numeric(6,0) not null primary key,
+apellido varchar2(100) not null,
+nombre   varchar2(100) not null,
+edad     numeric(3,0) not null
+);
+
+-- Para ver la estructura de una tabla
+
+DESCRIBE PERSONA
+
+
+insert into persona values(1001,'CORONEL', 'GUSTAVO', 57);
+insert into persona values(1002,'VILLAFUERTE', 'ALEJANDRA', 57);
+insert into persona values(1003,'VEGA', 'ANGEL', 57);
+insert into persona values(1004,'PADILLA', 'DIANA', 57);
+insert into persona values(1005,'RAMOS', 'DANIEL', 57);
+insert into persona values(1006,'ALAMO', 'PAULA', 57);
+insert into persona values(1007,'TORRE', 'LUIS', 57);
+
+
+COMMIT;
+
+
+
+
