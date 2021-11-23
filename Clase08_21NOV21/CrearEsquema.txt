@@ -50,5 +50,11 @@ insert into persona values(1007,'TORRE', 'LUIS', 57);
 COMMIT;
 
 
+-- CREACIÓN DE OTROS ESQUEMAS EJEMPLOS
+
+
+
+
+
 
 
