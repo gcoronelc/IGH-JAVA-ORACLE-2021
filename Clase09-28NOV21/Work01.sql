@@ -252,7 +252,97 @@ select * from HR.employees
 where commission_pct is not null;
 
 
+-- Paula Balbin Vega11:27
+-- 8. 
+select * from recursos.empleado
+where nombre like '%o';
+
+
+-- Nancy Vega Ramos11:27
+-- 10. 
+select scott.emp.ename as nombre,scott.emp.sal as sueldo from SCOTT.EMP
+where scott.emp.sal BETWEEN 3000 and 10000
+UNION
+select recursos.empleado.nombre as nombre, recursos.empleado.sueldo as sueldo  from RECURSOS.empleado 
+where recursos.empleado.sueldo BETWEEN 3000 and 10000;
+
+
+-- Jim Paul Chahuayo11:29
+-- 12:
+SELECT a.IDEMPLEADO,a.APELLIDO,a.NOMBRE, d.NOMBRE,a.COMISION
+FROM recursos.empleado a, recursos.departamento d
+WHERE a.IDDEPARTAMENTO = d.IDDEPARTAMENTO 
+AND d.IDDEPARTAMENTO = 103
+AND a.COMISION IS NULL;
+
+-- Paula Balbin Vega11:31
+-- 7. 
+select * from recursos.empleado
+where nombre like '%e_';
+
+-- Paula Balbin Vega11:34
+-- 9. 
+select * from recursos.empleado
+where apellido like '_a%' or apellido like '_o%';
+Hernando Torre Camones11:34
+
+-- 8.- 
+select * from RECURSOS.empleado 
+where NOMBRE like('%o');
+
+-- Jim Paul Chahuayo11:34
+-- 11: 
+SELECT a.IDEMPLEADO,a.APELLIDO,a.NOMBRE, d.NOMBRE
+FROM recursos.empleado a, recursos.departamento d
+WHERE a.IDDEPARTAMENTO = d.IDDEPARTAMENTO 
+AND d.IDDEPARTAMENTO IN(101,106,103);
+
+-- Nancy Vega Ramos11:35
+-- 11. 
+select scott.emp.ename as nombre, scott.emp.deptno as Dpto from SCOTT.EMP
+where scott.emp.deptno in (10,20,30)
+UNION
+select recursos.empleado.nombre as nombre, recursos.empleado.iddepartamento as Dpto from RECURSOS.empleado 
+where recursos.empleado.iddepartamento in (101,103,106);
+
+
+select * from HR.employees
+where substr(first_name,1,1) between 'D' and 'J'
+order by 2;
+
+
+-- Fecha inicio: 07/06/2002
+-- Fecha fin:    10/03/2005
+
+select * from HR.employees
+where hire_date between TO_DATE('07/06/2002','DD/MM/YYYY') and TO_DATE('10/03/2005','DD/MM/YYYY')
+order by hire_date;
+
+
+select * from HR.employees
+where hire_date >= TO_DATE('07/06/2002','DD/MM/YYYY')
+and hire_date < TO_DATE('10/03/2005','DD/MM/YYYY') + 1
+order by hire_date;
 
 
 
+-- TO_CHAR
+-- TO_DATE
 
+-- 21
+-- Nancy Vega Ramos12:49
+
+select * from EDUCA.matricula
+WHERE to_char(EDUCA.matricula.mat_fecha, 'MM')=to_char(sysdate, 'MM');
+
+
+
+-- Jim Paul Chahuayo12:52
+-- 20: 
+SELECT IDEMPLEADO,APELLIDO,NOMBRE, EXTRACT(month FROM FECINGRESO) "Mes"
+FROM RECURSOS.empleado
+WHERE EXTRACT(month FROM FECINGRESO) = 1;
+  
+  
+  
+  
