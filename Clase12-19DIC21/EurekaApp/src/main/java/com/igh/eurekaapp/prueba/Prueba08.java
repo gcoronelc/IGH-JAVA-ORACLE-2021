@@ -1,11 +1,8 @@
 package com.igh.eurekaapp.prueba;
 
-import com.igh.eurekaapp.db.AccesoDB;
 import com.igh.eurekaapp.dto.EmpleadoDto;
 import com.igh.eurekaapp.service.LogonService;
 import com.igh.eurekaapp.service.impl.LogonServiceImpl;
-import java.sql.Connection;
-import java.sql.Statement;
 
 /**
  * @author Eric Gustavo Coronel Castillo
