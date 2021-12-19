@@ -37,13 +37,13 @@ public class LogonServiceImpl implements LogonService {
 			rs = pstm.executeQuery();
 			if(rs.next()){
 				usuarioDto = new EmpleadoDto();
-				usuarioDto.setCodigo(rs.getString("chr_emplcodigo"));
-				usuarioDto.setPaterno(rs.getString("vch_emplpaterno"));
-				usuarioDto.setMaterno(rs.getString("vch_emplmaterno"));
-				usuarioDto.setNombre(rs.getString("vch_emplnombre"));
-				usuarioDto.setCiudad(rs.getString("vch_emplciudad"));
-				usuarioDto.setDireccion(rs.getString("vch_empldireccion"));
-				usuarioDto.setUsuario(rs.getString("vch_emplusuario"));
+				usuarioDto.setCodigo(rs.getString("CHR_EMPLCODIGO"));
+				usuarioDto.setPaterno(rs.getString("VCH_EMPLPATERNO"));
+				usuarioDto.setMaterno(rs.getString("VCH_EMPLMATERNO"));
+				usuarioDto.setNombre(rs.getString("VCH_EMPLNOMBRE"));
+				usuarioDto.setCiudad(rs.getString("VCH_EMPLCIUDAD"));
+				usuarioDto.setDireccion(rs.getString("VCH_EMPLDIRECCION"));
+				usuarioDto.setUsuario(rs.getString("VCH_EMPLUSUARIO"));
 				usuarioDto.setClave("*****");
 			}
 			rs.close();
