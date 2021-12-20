@@ -1,13 +1,33 @@
 ﻿
 
-SELECT CHR_EMPLCODIGO,VCH_EMPLPATERNO,VCH_EMPLMATERNO,VCH_EMPLNOMBRE,
-VCH_EMPLCIUDAD,VCH_EMPLDIRECCION,VCH_EMPLUSUARIO 
-FROM EMPLEADO 
-WHERE VCH_EMPLUSUARIO=? AND VCH_EMPLCLAVE=?
+private String codigo        ;
+private String paterno       ;
+private String materno       ;
+private String nombre        ;
+private String ciudad        ;
+private String direccion     ;
 
 
-SELECT CHR_EMPLCODIGO,VCH_EMPLPATERNO,VCH_EMPLMATERNO,VCH_EMPLNOMBRE,
-VCH_EMPLCIUDAD,VCH_EMPLDIRECCION,VCH_EMPLUSUARIO 
-FROM EMPLEADO 
-WHERE VCH_EMPLUSUARIO=? AND VCH_EMPLCLAVE=?
+private String codigo     ;
+private String usuario    ;
+private String clave      ;
+private String estado     ;
+
+
+select e.chr_emplcodigo,e.vch_emplpaterno,e.vch_emplmaterno,e.vch_emplnombre,
+e.vch_emplciudad,e.vch_empldireccion,u.vch_emplusuario,'*****' vch_emplclave
+from empleado e 
+join usuario u on e.chr_emplcodigo=u.chr_emplcodigo 
+where u.vch_emplusuario='cromero' and vch_emplclave=SHA('chicho')
+
+
+select chr_emplcodigo,vch_emplpaterno,vch_emplmaterno,vch_emplnombre, 
+vch_emplciudad,vch_empldireccion,vch_emplusuario 
+from empleado where vch_emplusuario=? and vch_emplclave=? 
+
+
+
+
+
+
 

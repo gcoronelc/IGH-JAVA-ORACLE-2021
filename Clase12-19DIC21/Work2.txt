@@ -1,25 +1,13 @@
-﻿1.- Verificar cliente.
-2.- Verificar moneda.
-3.- 
+﻿
 
-select count(1) cont from cliente where chr_cliecodigo='00001'
-
-
-select count(1) cont from moneda where chr_monecodigo='01'
-
-select count(1) cont from empleado where chr_emplcodigo='0001'
+SELECT CHR_EMPLCODIGO,VCH_EMPLPATERNO,VCH_EMPLMATERNO,VCH_EMPLNOMBRE,
+VCH_EMPLCIUDAD,VCH_EMPLDIRECCION,VCH_EMPLUSUARIO 
+FROM EMPLEADO 
+WHERE VCH_EMPLUSUARIO=? AND VCH_EMPLCLAVE=?
 
 
-select int_sucucontcuenta cont from sucursal where chr_sucucodigo=? for update;
-
-update sucursal set int_sucucontcuenta=? where chr_sucucodigo=?
-
-insert into cuenta(chr_cuencodigo,chr_monecodigo,chr_sucucodigo,chr_emplcreacuenta,
-chr_cliecodigo,dec_cuensaldo,dtt_cuenfechacreacion,vch_cuenestado,int_cuencontmov,chr_cuenclave)
-values(?,?,?,?,?,?,now(),'ACTIVO',?,?)
-
-
-insert into movimiento(chr_cuencodigo,int_movinumero,dtt_movifecha,chr_emplcodigo,chr_tipocodigo,dec_moviimporte)
-values(?,1,now(),?,'001',?)
-
+SELECT CHR_EMPLCODIGO,VCH_EMPLPATERNO,VCH_EMPLMATERNO,VCH_EMPLNOMBRE,
+VCH_EMPLCIUDAD,VCH_EMPLDIRECCION,VCH_EMPLUSUARIO 
+FROM EMPLEADO 
+WHERE VCH_EMPLUSUARIO=? AND VCH_EMPLCLAVE=?
 
