@@ -3,7 +3,6 @@ package com.igh.eurekaapp.prueba;
 import com.igh.eurekaapp.db.AccesoDB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 
 /**
  * @author Eric Gustavo Coronel Castillo

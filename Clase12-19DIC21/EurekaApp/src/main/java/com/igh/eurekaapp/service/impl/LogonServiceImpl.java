@@ -21,11 +21,14 @@ public class LogonServiceImpl implements LogonService {
 	@Override
 	public EmpleadoDto validarUsuario(String usuario, String clave) {
 		EmpleadoDto usuarioDto = null;
-		String SQL = "select e.chr_emplcodigo,e.vch_emplpaterno,e.vch_emplmaterno,"
+		/*String SQL = "select e.chr_emplcodigo,e.vch_emplpaterno,e.vch_emplmaterno,"
 				  + "e.vch_emplnombre,e.vch_emplciudad,e.vch_empldireccion,u.vch_emplusuario "
 				  + "from empleado e "
 				  + "join usuario u on e.chr_emplcodigo=u.chr_emplcodigo "
-				  + "where u.vch_emplusuario=? and vch_emplclave=SHA(?) ";
+				  + "where u.vch_emplusuario=? and vch_emplclave=SHA(?) ";*/
+		String SQL = "select chr_emplcodigo,vch_emplpaterno,vch_emplmaterno,vch_emplnombre, "
+				  + "vch_emplciudad,vch_empldireccion,vch_emplusuario "
+				  + "from empleado where vch_emplusuario=? and vch_emplclave=? ";
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
 		Connection cn = null;
@@ -35,7 +38,7 @@ public class LogonServiceImpl implements LogonService {
 			pstm.setString(1, usuario);
 			pstm.setString(2, clave);
 			rs = pstm.executeQuery();
-			if(rs.next()){
+			if (rs.next()) {
 				usuarioDto = new EmpleadoDto();
 				usuarioDto.setCodigo(rs.getString("CHR_EMPLCODIGO"));
 				usuarioDto.setPaterno(rs.getString("VCH_EMPLPATERNO"));
@@ -52,7 +55,7 @@ public class LogonServiceImpl implements LogonService {
 			throw new RuntimeException(e.getMessage());
 		} catch (Exception e) {
 			throw new RuntimeException("Se ha producido un error, intentelo nuevamente.");
-		}finally {
+		} finally {
 			try {
 				cn.close();
 			} catch (Exception e) {

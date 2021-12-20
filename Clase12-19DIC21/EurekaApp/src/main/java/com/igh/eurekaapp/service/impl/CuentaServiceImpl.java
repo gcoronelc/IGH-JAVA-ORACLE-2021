@@ -25,11 +25,11 @@ public class CuentaServiceImpl implements CuentaService {
 		final String SQL4 = "select chr_sucucodigo sucursal from asignado where chr_emplcodigo=? and dtt_asigfechabaja is null";
 		final String SQL5 = "select int_sucucontcuenta cont from sucursal where chr_sucucodigo=? for update";
 		final String SQL6 = "update sucursal set int_sucucontcuenta=? where chr_sucucodigo=?";
-		final String SQL7 = "insert into cuenta(chr_cuencodigo,chr_monecodigo,chr_sucucodigo,chr_emplcreacuenta,\n"
-				  + "chr_cliecodigo,dec_cuensaldo,dtt_cuenfechacreacion,vch_cuenestado,int_cuencontmov,chr_cuenclave)\n"
-				  + "values(?,?,?,?,?,?,now(),'ACTIVO',?,?)";
-		final String SQL8 = "insert into movimiento(chr_cuencodigo,int_movinumero,dtt_movifecha,chr_emplcodigo,chr_tipocodigo,dec_moviimporte)\n"
-				  + "values(?,1,now(),?,'001',?)";
+		final String SQL7 = "insert into cuenta(chr_cuencodigo,chr_monecodigo,chr_sucucodigo,chr_emplcreacuenta, "
+				  + "chr_cliecodigo,dec_cuensaldo,dtt_cuenfechacreacion,vch_cuenestado,int_cuencontmov,chr_cuenclave) "
+				  + "values(?,?,?,?,?,?,SYSDATE,'ACTIVO',?,?)";
+		final String SQL8 = "insert into movimiento(chr_cuencodigo,int_movinumero,dtt_movifecha,chr_emplcodigo,chr_tipocodigo,dec_moviimporte) "
+				  + "values(?,1,SYSDATE,?,'001',?)";
 		Connection cn = null;
 		PreparedStatement pstm = null;
 		ResultSet rs = null;

@@ -1,0 +1,12 @@
+PROCESOS
+--------------------------------------------------------------------------------
+- LOGUEO: Para el inicio de sesión.
+- CREAR CUENTA: Crea una nueva cuenta para un cliente.
+- REGISTRAR DEPOSITO: Registra un depósito en una determinada cuenta.
+- REGISTRAR RETIRO: Registra un retiro en una determinada cuenta.
+- REGISTRAR TRANSFERENCIA: Registra una transferencia entre cuentas de la misma moneda.
+- DAR DE BAJA A UNA CUENTA: Desactivar o inavilitar una cuenta.
+
+
+
+
