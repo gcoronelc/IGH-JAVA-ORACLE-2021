@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04a1a92a-761a-4008-850c-984329cb5fe7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL-EUREKA"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT CONCAT(SUCUCODIGO, ' - ', SUCUNOMBRE) SUCURSAL,
+CUENCODIGO CUENTA,
+CONCAT(CLIECODIGO, ' - ', CLIENOMBRE, ' ', CLIEPATERNO) CLIENTE,
+MONENOMBRE MONEDA, CUENSALDO SALDO 
+FROM V_CUENTA]]>
+	</queryString>
+	<field name="SUCURSAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SUCURSAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUCURSAL"/>
+	</field>
+	<field name="CUENTA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cuencodigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUENTA"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="v_cuenta"/>
+	</field>
+	<field name="CLIENTE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CLIENTE"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLIENTE"/>
+	</field>
+	<field name="MONEDA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="monenombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="MONEDA"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="v_cuenta"/>
+	</field>
+	<field name="SALDO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="cuensaldo"/>
+		<property name="com.jaspersoft.studio.field.label" value="SALDO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="v_cuenta"/>
+	</field>
+	<group name="SUCURSAL">
+		<groupExpression><![CDATA[$F{SUCURSAL}]]></groupExpression>
+		<groupHeader>
+			<band height="89">
+				<textField>
+					<reportElement x="10" y="10" width="250" height="30" uuid="e2fcb9c7-ac45-4d12-90ca-20f2f0dcd9b0"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SUCURSAL}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="148" y="50" width="138" height="30" uuid="2afdbd08-1079-4ff0-8161-528744413c0c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6dc39b08-875c-4bb7-a678-e889559d12bc"/>
+					</reportElement>
+					<text><![CDATA[CLIENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="410" y="50" width="138" height="30" uuid="2d0602f6-aa81-4c81-b64b-44c96605fe20">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52a163da-17b2-4a8c-b1e0-27709a05241e"/>
+					</reportElement>
+					<text><![CDATA[SALDO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="50" width="141" height="30" uuid="2b881077-b5bf-4b89-b657-fe96ae99b2ec">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2b5bac4c-1d95-438d-8970-700eeb49f7f2"/>
+					</reportElement>
+					<text><![CDATA[CUENTA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="280" y="50" width="138" height="30" uuid="5999e1a9-a02f-45ba-8c8f-d4e70e37e9d7">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c821568-0c1c-40b1-b68a-cd0bf1125521"/>
+					</reportElement>
+					<text><![CDATA[MONEDA]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="280" height="50" uuid="c7a7b927-ff16-4ed5-a1c2-d393f8690231"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CUENTAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" uuid="f3c3b482-7b01-4289-8278-956e0f4ea9a7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2b5bac4c-1d95-438d-8970-700eeb49f7f2"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CUENTA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" uuid="2cbfcd6b-b4e2-4116-8b64-a917f4d8cfa9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6dc39b08-875c-4bb7-a678-e889559d12bc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" uuid="f67a0a25-beb0-4b76-bc24-3571e252c0f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c821568-0c1c-40b1-b68a-cd0bf1125521"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{MONEDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" uuid="620068d8-8756-4e04-9bea-5faaac694ec4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52a163da-17b2-4a8c-b1e0-27709a05241e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SALDO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

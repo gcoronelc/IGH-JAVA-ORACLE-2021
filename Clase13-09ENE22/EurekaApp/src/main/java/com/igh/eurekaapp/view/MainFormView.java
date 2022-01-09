@@ -54,6 +54,8 @@ public class MainFormView extends javax.swing.JFrame {
       aboutMenuItem = new javax.swing.JMenuItem();
       menuProcesos = new javax.swing.JMenu();
       menuProcesosCrearCuenta = new javax.swing.JMenuItem();
+      menuReportes = new javax.swing.JMenu();
+      menuReportesListaCuentas = new javax.swing.JMenuItem();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,6 +132,18 @@ public class MainFormView extends javax.swing.JFrame {
 
       menuBar.add(menuProcesos);
 
+      menuReportes.setText("Reportes");
+
+      menuReportesListaCuentas.setText("Listado de cuentas");
+      menuReportesListaCuentas.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            menuReportesListaCuentasActionPerformed(evt);
+         }
+      });
+      menuReportes.add(menuReportesListaCuentas);
+
+      menuBar.add(menuReportes);
+
       setJMenuBar(menuBar);
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -158,6 +172,10 @@ public class MainFormView extends javax.swing.JFrame {
 		*/
 		mostrarForm(ProcesoCrearCuentaView.class);
    }//GEN-LAST:event_menuProcesosCrearCuentaActionPerformed
+
+   private void menuReportesListaCuentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuReportesListaCuentasActionPerformed
+      mostrarForm(ReporteListaCuentas.class);
+   }//GEN-LAST:event_menuReportesListaCuentasActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -208,6 +226,8 @@ public class MainFormView extends javax.swing.JFrame {
    private javax.swing.JMenuBar menuBar;
    private javax.swing.JMenu menuProcesos;
    private javax.swing.JMenuItem menuProcesosCrearCuenta;
+   private javax.swing.JMenu menuReportes;
+   private javax.swing.JMenuItem menuReportesListaCuentas;
    private javax.swing.JMenuItem openMenuItem;
    private javax.swing.JMenuItem pasteMenuItem;
    private javax.swing.JMenuItem saveAsMenuItem;
