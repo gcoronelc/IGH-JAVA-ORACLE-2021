@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
-
 package com.igh.eurekaapp.view;
 
+import com.igh.eurekaapp.controller.CuentaController;
 import com.igh.eurekaapp.dto.ComboDto;
 
 /**
@@ -16,11 +12,28 @@ import com.igh.eurekaapp.dto.ComboDto;
  * @cursos gcoronelc.github.io
  */
 public class ProcesoCrearCuentaView extends javax.swing.JInternalFrame {
+	
+	private CuentaController cuentaController;
 
     /** Creates new form ProcesoCrearCuentaView */
     public ProcesoCrearCuentaView() {
         initComponents();
+		  cuentaController = new CuentaController();
+		  llenarCombos();
     }
+	 
+	 private void llenarCombos(){
+		 // Combo de monedas
+		 cboMoneda.removeAllItems();
+		 for(ComboDto bean: cuentaController.getMonedas()){
+			 cboMoneda.addItem(bean);
+		 }
+		 // Combo de clientes
+		 cboCliente.removeAllItems();
+		 for(ComboDto bean: cuentaController.getClientes()){
+			 cboCliente.addItem(bean);
+		 }
+	 }
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -109,6 +122,8 @@ public class ProcesoCrearCuentaView extends javax.swing.JInternalFrame {
       jLabel5.setText("Empleado");
 
       txtEmpleado.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+      txtEmpleado.setDisabledTextColor(new java.awt.Color(0, 102, 204));
+      txtEmpleado.setEnabled(false);
 
       txtClave.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 

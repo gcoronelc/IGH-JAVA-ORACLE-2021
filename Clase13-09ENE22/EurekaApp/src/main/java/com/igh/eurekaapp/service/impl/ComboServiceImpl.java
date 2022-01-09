@@ -22,6 +22,7 @@ import java.util.List;
 public class ComboServiceImpl implements ComboService {
 
 	private final String SQL_MONEDAS = "select chr_monecodigo CODIGO, vch_monedescripcion ETIQUETA from moneda";
+	private final String SQL_CLIENTES = "select chr_cliecodigo CODIGO , CONCAT(VCH_CLIEPATERNO,' ',VCH_CLIEMATERNO,' ',VCH_CLIENOMBRE) ETIQUETA from cliente";
 
 	@Override
 	public List<ComboDto> getMonedas() {
@@ -53,7 +54,30 @@ public class ComboServiceImpl implements ComboService {
 
 	@Override
 	public List<ComboDto> getClientes() {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+		List<ComboDto> lista = new ArrayList<>();
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		Connection cn = null;
+		try {
+			cn = AccesoDB.getConnection();
+			pstm = cn.prepareStatement(SQL_CLIENTES);
+			rs = pstm.executeQuery();
+			while (rs.next()) {
+				lista.add(mapRow(rs));
+			}
+			rs.close();
+			pstm.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e.getMessage());
+		} catch (Exception e) {
+			throw new RuntimeException("Se ha producido un error, intentelo nuevamente.");
+		} finally {
+			try {
+				cn.close();
+			} catch (Exception e) {
+			}
+		}
+		return lista;
 	}
 
 	@Override

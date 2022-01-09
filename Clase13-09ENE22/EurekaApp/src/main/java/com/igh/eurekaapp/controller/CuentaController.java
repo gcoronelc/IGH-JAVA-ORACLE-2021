@@ -1,4 +1,4 @@
-package com.igh.eurekaapp.prueba;
+package com.igh.eurekaapp.controller;
 
 import com.igh.eurekaapp.dto.ComboDto;
 import com.igh.eurekaapp.service.ComboService;
@@ -13,18 +13,19 @@ import java.util.List;
  * @facebook www.facebook.com/groups/desarrollasoftware
  * @cursos gcoronelc.github.io
  */
-public class Prueba11 {
+public class CuentaController {
 
-	public static void main(String[] args) {
-		try {
-			ComboService service = new ComboServiceImpl();
-			List<ComboDto> lista = service.getClientes();
-			for (ComboDto bean : lista) {
-				System.out.println(bean);
-			}
-		} catch (Exception e) {
-			System.err.println(e.getMessage());
-		}
+	private ComboService comboService;
+
+	public CuentaController() {
+		comboService = new ComboServiceImpl();
 	}
 
+	public List<ComboDto> getMonedas() {
+		return comboService.getMonedas();
+	}
+
+	public List<ComboDto> getClientes() {
+		return comboService.getClientes();
+	}
 }
