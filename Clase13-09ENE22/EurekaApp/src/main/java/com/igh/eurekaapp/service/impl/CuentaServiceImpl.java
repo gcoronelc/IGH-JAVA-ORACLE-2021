@@ -27,9 +27,9 @@ public class CuentaServiceImpl implements CuentaService {
 		final String SQL6 = "update sucursal set int_sucucontcuenta=? where chr_sucucodigo=?";
 		final String SQL7 = "insert into cuenta(chr_cuencodigo,chr_monecodigo,chr_sucucodigo,chr_emplcreacuenta, "
 				  + "chr_cliecodigo,dec_cuensaldo,dtt_cuenfechacreacion,vch_cuenestado,int_cuencontmov,chr_cuenclave) "
-				  + "values(?,?,?,?,?,?,SYSDATE,'ACTIVO',?,?)";
+				  + "values(?,?,?,?,?,?,SYSDATE(),'ACTIVO',?,?)";
 		final String SQL8 = "insert into movimiento(chr_cuencodigo,int_movinumero,dtt_movifecha,chr_emplcodigo,chr_tipocodigo,dec_moviimporte) "
-				  + "values(?,1,SYSDATE,?,'001',?)";
+				  + "values(?,1,SYSDATE(),?,'001',?)";
 		Connection cn = null;
 		PreparedStatement pstm = null;
 		ResultSet rs = null;

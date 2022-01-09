@@ -22,7 +22,7 @@ import java.util.List;
 public class ComboServiceImpl implements ComboService {
 
 	private final String SQL_MONEDAS = "select chr_monecodigo CODIGO, vch_monedescripcion ETIQUETA from moneda";
-	private final String SQL_CLIENTES = "select chr_cliecodigo CODIGO , CONCAT(VCH_CLIEPATERNO,' ',VCH_CLIEMATERNO,' ',VCH_CLIENOMBRE) ETIQUETA from cliente";
+	private final String SQL_CLIENTES = "select chr_cliecodigo CODIGO , CONCAT(VCH_CLIEPATERNO,' ',VCH_CLIEMATERNO,' ',VCH_CLIENOMBRE) ETIQUETA from cliente order by VCH_CLIEPATERNO";
 
 	@Override
 	public List<ComboDto> getMonedas() {

@@ -2,7 +2,9 @@ package com.igh.eurekaapp.controller;
 
 import com.igh.eurekaapp.dto.ComboDto;
 import com.igh.eurekaapp.service.ComboService;
+import com.igh.eurekaapp.service.CuentaService;
 import com.igh.eurekaapp.service.impl.ComboServiceImpl;
+import com.igh.eurekaapp.service.impl.CuentaServiceImpl;
 import java.util.List;
 
 /**
@@ -16,9 +18,11 @@ import java.util.List;
 public class CuentaController {
 
 	private ComboService comboService;
+	private CuentaService cuentaService;
 
 	public CuentaController() {
 		comboService = new ComboServiceImpl();
+		cuentaService = new CuentaServiceImpl();
 	}
 
 	public List<ComboDto> getMonedas() {
@@ -27,5 +31,9 @@ public class CuentaController {
 
 	public List<ComboDto> getClientes() {
 		return comboService.getClientes();
+	}
+	
+	public String crearCuenta(String codCliente, String codMoneda, Double importe, String clave, String empleado){
+		return cuentaService.crearCuenta(codCliente, codMoneda, importe, clave, empleado);
 	}
 }
