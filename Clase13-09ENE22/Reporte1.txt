@@ -1,0 +1,17 @@
+LISTADO DE CUENTAS
+----------------------------------------------------------
+
+
+001 - SUCURSAL 1
+
+     CUENTA      CLIENTE             MONEDA         SALDO
+     ----------------------------------------------------------------
+     001-0001    GUSTAVO             SOLES          5600.00
+     
+     
+     
+SELECT CONCAT(SUCUCODIGO, ' - ', SUCUNOMBRE) SUCURSAL,
+CUENCODIGO CUENTA,
+CONCAT(CLIECODIGO, ' - ', CLIENOMBRE, ' ', CLIEPATERNO) CLIENTE,
+MONENOMBRE MONEDA, CUENSALDO SALDO 
+FROM V_CUENTA 
