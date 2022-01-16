@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Sumar extends HttpServlet {
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Variables
 		int num1, num2, suma;
 		// Datos
