@@ -13,8 +13,8 @@ td{
 	padding: 5;
 	text-align: center;
 	width: 50px;
-	height: 50px;
-	background-color: aqua;
+	height: 40px;
+	background-color:#abdbe3;
 }
 
 </style>

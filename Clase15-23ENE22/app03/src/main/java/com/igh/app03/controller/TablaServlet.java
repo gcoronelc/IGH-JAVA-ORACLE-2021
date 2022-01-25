@@ -14,14 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.igh.app03.service.TablaService;
 
+@WebServlet(name = "TablaServlet", urlPatterns = { "/TablaServlet" })
 public class TablaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// Variables
 		int numero;
-		List<Map<String,Integer>> tabla = new ArrayList();
+		List<Map<String, Integer>> tabla = new ArrayList();
 		// Datos
 		numero = Integer.parseInt(request.getParameter("numero"));
 		// Proceso

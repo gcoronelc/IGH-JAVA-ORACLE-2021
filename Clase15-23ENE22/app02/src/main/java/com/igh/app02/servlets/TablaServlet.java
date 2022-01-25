@@ -8,10 +8,12 @@ import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet(name = "TablaServlet", urlPatterns = {"/TablaServlet"})
 public class TablaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -30,7 +32,6 @@ public class TablaServlet extends HttpServlet {
 			row.put("col3", numero*i);
 			tabla.add(row);
 		}
-		System.out.println("Filas: " + tabla.size());
 		// Reporte
 		request.setAttribute("tabla", tabla);
 		request.setAttribute("numero", numero);
