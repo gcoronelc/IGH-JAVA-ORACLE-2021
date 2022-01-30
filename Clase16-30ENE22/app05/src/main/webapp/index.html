@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+td {
+	margin: 5;
+	padding: 5;
+	text-align: center;
+	width: 50px;
+	height: 40px;
+	background-color: #abdbe3;
+}
+</style>
+</head>
+<body>
+	<h1>TABLA DE MULTIPLICAR</h1>
+	<h2>Captura de datos</h2>
+	<form id="form1">
+		<div>
+			<label>Número:</label> <input type="number" name="numero" id="numero" />
+		</div>
+		<div>
+			<input type="button" id="btnProcesar" value="Procesar" />
+		</div>
+	</form>
+
+	<div id="divResultado">
+		<p>Aquí se mostrara el resultado.</p>
+	</div>
+
+	<!-- Sección de JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+	<script>
+	
+		$(function() {
+			$("#btnProcesar").click(fnBtnProcesar);
+		});
+		
+		function fnBtnProcesar(){
+			// Datos
+			let data = $("#form1").serialize();
+			// Proceso
+			$("#divResultado").html("Procesando su solicitud, espere.");
+			$.post("TablaController",data,function(arreglo){
+				console.log(arreglo);
+				let numero = $("#numero").val();
+				let texto = "<h1>Tabla del " + numero + "</h1>";
+				texto += "<table>";
+				for(let i=0;i<arreglo.length;i++){
+					texto += "<tr>";
+					texto += "<td>" + arreglo[i].col1.toString() + "</td>";
+					texto += "<td>*</td>";
+					texto += "<td>" + arreglo[i].col2.toString() + "</td>";
+					texto += "<td> = </td>";
+					texto += "<td>" + arreglo[i].col3.toString() + "</td>";
+					texto += "</tr>";
+				}
+				texto += "</table>";
+				$("#divResultado").html(texto);
+			});
+		}
+	</script>
+</body>
+</html>
