@@ -3,3 +3,7 @@
 <div class="row">
 Consultar cuentas
 </div>
+
+<script>
+alert("Hola");
+</script>
